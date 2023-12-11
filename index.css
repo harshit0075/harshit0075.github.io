@@ -199,7 +199,12 @@ section .title::after {
 /* home section styling */
 .home-2,.home {
   display: flex;
-  background: url("https://wallpaperaccess.com/full/5651980.jpg") no-repeat center;
+  background: url("https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio-thumbnail.jpg ") no-repeat center;
+
+  /* https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio-thumbnail.jpg */
+
+  /* https://wallpaperaccess.com/full/5651980.jpg */
+
   background-color: #111;
   height: 50vh;
   color: #fff;
