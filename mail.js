@@ -19,10 +19,10 @@ function SendMSG(e) {
   
     let temp = {
       from_name: nam_txt.value,
-      to_name: "Harshit Kumar",
+      to_name: "Swati Prabhanand Anchatageri",
       message: body,
     };
-    
+   
     emailjs.send("service_0u9oqub", "template_ctfs7am", temp).then((res) => {
       if (res.status == 200) {
         success();
@@ -38,18 +38,20 @@ function SendMSG(e) {
   }
   
   function success() {
-    let thank = document.querySelector(".msg-pop-up");
-    thank.style.display = "block";
-    setTimeout(() => {
-      thank.style.display = "none";
-    }, 2000);
+    // let thank = document.querySelector(".msg-pop-up");
+    // thank.style.display = "block";
+    // setTimeout(() => {
+    //   thank.style.display = "none";
+    // }, 2000);
+    alert("Email Sent Successfully")
   }
   
   function failure() {
-    let fail = document.querySelector(".failed-msgpop");
-    fail.style.display = "block";
-    setTimeout(() => {
-      fail.style.display = "none";
-    }, 2000);
+    // let fail = document.querySelector(".failed-msgpop");
+    // fail.style.display = "block";
+    // setTimeout(() => {
+    //   fail.style.display = "none";
+    // }, 2000);
+    alert("Email Failed")
   }
   

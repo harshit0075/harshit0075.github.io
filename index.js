@@ -1,95 +1,74 @@
-$(document).ready(function () {
-    $(window).scroll(function () {
-     
-      if (this.scrollY > 20) {
-        $("#nav-menu").addClass("sticky");
-      } else {
-        $("#nav-menu").removeClass("sticky");
-      }
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('#main-nav').addClass("sticky");
+        }else{
+            $('#main-nav').removeClass("sticky");
+        }
+        
+    })
   
-      
-      if (this.scrollY > 500) {
-        $(".scroll-up-btn").addClass("show");
-      } else {
-        $(".scroll-up-btn").removeClass("show");
-      }
+    // togel/menu nevbar script
+    $('.menu-btn').click(function(){
+        $('#main-nav .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
     });
   
-  
-    $(".scroll-up-btn").click(function () {
-      $("html").animate({ scrollTop: 0 });
-      
-      $("html").css("scrollBehavior", "auto");
+    $('.menu li a').click(function(){
+        $('#main-nav .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
     });
   
-    $("#nav-menu .menu li a").click(function () {
- 
-      $("html").css("scrollBehavior", "smooth");
-    });
+    //   typing animation script 
+       var typed = new Typed (".panku",{
+        strings:["Full-Stack Web-Developer"],
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+       })
   
-
-    $(".menu-btn").click(function () {
-      $("#nav-menu .menu").toggleClass("active");
-      $(".menu-btn i").toggleClass("active");
-    });
   
-    var typed = new Typed(".typing", {
-      strings: ["Full Stack Developer", "Problem Solver"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
-    });
+       var typed = new Typed (".panku2",{
+        strings:["Full-Stack Web-Developer"],
+        typeSpeed:100,
+        backSpeed:60,
+        loop:true
+       });
   
-    var typed = new Typed(".typing-2", {
-      strings: ["Full Stack Developer", "Problem Solver"],
-      typeSpeed: 100,
-      backSpeed: 60,
-      loop: true,
-    });
+    // owl carousel script
+    $('.carousel').owlCarousel({
+         margin:20,
+         loop:true,
+         autoplayTimeOut:2000,
+         autoplayHoverPause:true,
+         responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:3,
+                nav:false
+            }
+         }
+    })
   
-    
-    $(".carousel").owlCarousel({
-      margin: 20,
-      loop: true,
-      autoplay: true,
-      autoplayTimeOut: 2000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1,
-          nav: false,
-        },
-        600: {
-          items: 2,
-          nav: false,
-        },
-        1000: {
-          items: 3,
-          nav: false,
-        },
-      },
-    });
   });
   
-  let drive = document
-    .querySelector(".Drivegoogle")
-    .addEventListener("click", openDrive);
+  // resume section 
   
-  function openDrive() {
+  document.getElementById("resume-link-1").onclick = () => {
     window.open(
-      (href =
-        "https://drive.google.com/file/d/1-bDyGnLwKlmqjipsvtm7ChlgUPkNHWyI/view?usp=drive_link")
+      "https://drive.google.com/file/d/1mJLkOcQK3AUk7TT-qdL614OicG-ckcGW/view?usp=sharing"
     );
-  }
+  };
   
-  let drive2 = document
-    .querySelector(".googleDrive")
-    .addEventListener("click", openDrive2);
-  
-  function openDrive2() {
+  document.getElementById("resume-link-2").onclick = () => {
     window.open(
-      (href =
-        "https://drive.google.com/file/d/1-bDyGnLwKlmqjipsvtm7ChlgUPkNHWyI/view?usp=drive_link")
+      "https://drive.google.com/file/d/1mJLkOcQK3AUk7TT-qdL614OicG-ckcGW/view?usp=sharing"
     );
-  }
-  
+  };
